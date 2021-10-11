@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="./js/boardRead.js"></script>
+<script type="text/javascript" src="./js/boardDelete.js"></script>
+<script type="text/javascript" src="./js/boardUpdate.js"></script>
+<script type="text/javascript" src="./js/download.js"></script>
+<link rel="stylesheet" href="css/bootstrap.css">
+<head>
+<meta charset="UTF-8">
+<title>글 상세보기</title>
+</head>
+<body>
+	<div style="width: 400px; height: 400px; margin: 0 auto;">
+		<div class="col-10 ps-5">
+			<div class="row">
+				<div class="col-1"></div>
+				<div class="col">
+					<h1 align="center">등록 화면</h1>
+					<br>
+					<div class="row">
+						<div class="row">
+							<div class="col">
+								<label for="boardNo">글 번호 :&nbsp;</label><input type="text" id="boardNo" disabled="disabled" style="border:0 solid black; background-color: White;">
+							</div>
+							<div class="col-8 mt-2 pb-3"  style="padding: 5px 0px 0px 0px;">
+								<label for="boardTitle">제목</label><input class="form-control" type="text" style="width: 490px; height: 30px;" id="boardTitle">
+							</div>
+							<br>
+						</div>
+						<div class="row">
+							<div class="col"></div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<label for="boardContent">내용</label><input class="form-control" type="text" style="width: 490px; height: 100px;" id="boardContent">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+							<!-- 첨부파일 다운 -->
+							<br>
+							<label for="boardFile">첨부파일</label>							
+								<input type="button" id="boardFile" onclick="Down()">																								
+							</div>
+						</div>
+						<div class="row" align="right">
+							<div class="col"></div>
+							<div style="padding: 5px 0px; ">
+								<a class="btn btn-primary me-2" href="./boardList.html" role="button">목록으로</a>
+								<button id="btn_update" type="button" class="btn btn-primary me-2">수정</button>
+								<button id="btn_delete" type="button" class="btn btn-primary me-2">삭제</button>				 			
+							</div>
+						</div>
+					</div>					
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

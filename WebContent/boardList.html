@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="./js/boardList.js"></script>
+<script type="text/javascript" src="./js/boardSearch.js"></script>
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/boardlist.css">
+<head>
+<meta charset="UTF-8">
+<title>게시판글 목록</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<h2 align="left">ㆍ 목록</h2>
+				<a class="btn btn-primary pull-right" href="./boardWriting.html" role="button" style="width: 80px;">등록</a>
+			</div>
+			<a href="./chart.html">한달 이내 첨부파일 게시물 차트</a><br>
+			<a href="./quartzList.html">스케줄러 상태 페이지</a>
+		</div>
+		<br>
+		<!-- 검색 -->
+		<form method="get">
+			<div class="row">
+				<div class="col" style="float: right;">
+					<!-- 검색 버튼  -->
+					<input onclick="currentPage(1)" type="button" value="검색" class="btn btn-primary" style="float: right; width: 80px;">
+					<!-- 검색 버튼 끝  -->
+					<!-- 검색 창 -->
+					<input id="searchWord" name="searchWord" type="text" class="form-control" style="width: 300px; height: 30px;">
+					<!-- 검색 창 끝 -->
+				</div>
+				<div class="row">
+					<div class="col " style="float: right;">
+						<!-- 검색 옵션 -->
+						<select id="searchType" name="searchType" class="form-control" style="width: 100px; height: 30px;">
+							<option value="freeboard_title">제목</option>
+							<option value="freeboard_content">내용</option>
+						</select>
+						<!-- 검색 옵션 끝-->
+					</div>
+				</div>
+				<span style="font-size: 25px;"><i class="bi bi-search"></i></span>
+			</div>
+		</form>
+		<br>
+		<!-- 검색기능 끝 -->
+		<div class="row">
+			<table id="board_list" class="table table-striped" style="text-align: center; border: 1px solid #dddddd; padding: 1px;">
+				<thead>
+					<tr>
+						<th style="background-color: #eeeeee; text-align: center;">글번호</th>
+						<th style="background-color: #eeeeee; text-align: center;">제목</th>
+						<th style="background-color: #eeeeee; text-align: center;">내용</th>
+						<th style="background-color: #eeeeee; text-align: center;">날짜</th>
+					</tr>
+				</thead>
+				<tbody id="board_ser">
+				</tbody>
+			</table>
+			<!-- 페이징 -->
+			<div class="container" align="center">
+				<div class="row">
+					<div class="col" id="data-container">												
+					</div>
+				</div>
+			</div>
+			<!-- 페이징 끝 -->
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="./js/boardWrite.js"></script>
+<link rel="stylesheet" href="css/bootstrap.css">
+<head>
+<meta charset="UTF-8">
+<title>글 등록</title>
+</head>
+<body>
+	<div style="width: 400px; height: 400px; margin: 0 auto;">
+		<div class="col-10 ps-5">
+			<div class="row">
+				<div class="col-1"></div>
+				<div class="col">
+					<h1 align="center">등록 화면</h1>
+					<form id="writeForm" method="post" enctype="multipart/form-data">
+						<div class="row">
+							<div class="row">
+								<div class="col-8 mt-2 pb-3">
+									<label for="freeboard_title">제목</label><input class="form-control" type="text" style="width: 490px; height: 30px;" id="freeboard_title" name="freeboard_title">
+								</div>
+								<br>
+							</div>
+							<div class="row">
+								<div class="col"></div>
+							</div>
+							<div class="row">
+								<div class="col">
+									<label for="freeboard_content">내용</label><input class="form-control" type="text" style="width: 490px; height: 100px;" id="freeboard_content" name="freeboard_content">
+								</div>
+							</div>
+							<!-- 파일업로드  -->
+							<input type="file" name="file_name">
+							<!-- /파일업로드 -->
+							<div class="row" align="right">
+								<div class="col" style="padding: 5px;"></div>
+								<div class="col-2 mt-4 text-end d-grid" style="width: 150px; height: 40px;">
+									<a class="btn btn-primary me-2" href="./boardList.html" role="button">취소</a>
+									<input type="submit" class="btn btn-primary me-2" value="저장" onclick="formSubmit()">									
+								</div>
+							</div>
+						</div>
+					</form> 				
+				</div>
+			</div>
+		</div>
+	</div> 
+</body>
+</html>

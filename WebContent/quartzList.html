@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="./js/quartzList.js"></script>
+<script type="text/javascript" src="./js/20run.js"></script>
+<script type="text/javascript" src="./js/30run.js"></script>
+<script type="text/javascript" src="./js/20stop.js"></script>
+<script type="text/javascript" src="./js/30stop.js"></script>
+<script type="text/javascript" src="./js/20check.js"></script>
+<script type="text/javascript" src="./js/30check.js"></script>
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/boardlist.css">
+<head>
+<meta charset="UTF-8">
+<title>실행 목록 조회</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<a class="btn btn-primary pull-right" href="./boardList.html" role="button">게시판으로 돌아가기</a>
+			<h2 align="left">ㆍ 스케줄러 상태 제어</h2>
+			<div class="row">
+				스케줄러 #1 <span class="sch-text"></span> 
+						 <button id="schRun" type="button" class="btn btn-primary" style="width: 80px;">RUN</button>
+						 <button id="schStop" type="button" class="btn btn-primary" style="width: 80px;">STOP</button>
+				<br>
+				스케줄러 #2 <span class="sch-text1"></span>
+						 <button id="schRun2" type="button" class="btn btn-primary" style="width: 80px;">RUN</button>
+						 <button id="schStop2" type="button" class="btn btn-primary" style="width: 80px;">STOP</button>
+			</div>
+			<div class="col">
+				<h2 align="left">ㆍ 실행 목록</h2>
+			</div>			
+		</div>
+		<br>
+		<div class="row">
+			<table id="shc_list" class="table table-striped" style="text-align: center; border: 1px solid #dddddd; padding: 1px;">
+					<tr>
+						<th style="background-color: #eeeeee; text-align: center;">index</th>
+						<th style="background-color: #eeeeee; text-align: center;">type1</th>
+						<th style="background-color: #eeeeee; text-align: center;">type1-Time</th>
+						<th style="background-color: #eeeeee; text-align: center;">type2</th>
+						<th style="background-color: #eeeeee; text-align: center;">type2-Time</th>
+					</tr>
+			</table>
+			<!-- 페이징 -->
+			<div class="container" align="center">
+				<div class="row">
+					<div class="col" id="###">												
+					</div>
+				</div>
+			</div>
+			<!-- 페이징 끝 -->
+		</div>
+	</div>
+</body>
+</html>
