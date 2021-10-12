@@ -3,7 +3,6 @@
  */
 $(function() {
     $("#schRun").click(function() {
-
       $.ajax({
         type:"get",
         url:"/flow/APIScheduler",

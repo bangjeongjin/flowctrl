@@ -289,7 +289,6 @@ public class BoardDAO {
 	}
 	//스케줄러 list
 	public List<SchVO> selectAllSch() {
-
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;

@@ -3,7 +3,6 @@
  */
 $(function() {
     $("#schStop2").click(function() {
-
       $.ajax({
         type:"get",
         url:"/flow/APISchedulerStop2",

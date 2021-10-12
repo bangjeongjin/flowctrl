@@ -13,7 +13,7 @@ function searchajax() {
 					if(data.length > 0){
 						var str = '';						
 						var resultJson = JSON.parse(data);
-					
+				
 						$.each(resultJson, function(i) {
 							str += '<tr>';
 							str += '<td>' + resultJson[i].freeboard_no + '</td><td><a href="#" onclick="boardRead('+resultJson[i].freeboard_no+');">'+ resultJson[i].freeboard_title + '</a></td><td>' + resultJson[i].freeboard_content + '</td>';
